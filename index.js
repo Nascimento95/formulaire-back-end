@@ -24,7 +24,7 @@ app.post('/form/signup', (req, res) => {
     console.log(req.body)
     res.redirect('/signup')
 })
-  
+  console.log("salut");
 app.listen(port , () =>{
     console.log(`serveur started on port: ${port}`);
 })
