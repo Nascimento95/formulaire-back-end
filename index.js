@@ -7,7 +7,8 @@ app.engine("handlebars",engine())
 app.set("view engine","handlebars")
 // permet d'utiliser le formulaire pour recupéré les valeur de l'input 
 app.use(express.urlencoded({ extended: true }))
-
+// on crée la route pour avoir accès a la page home crée dans handlebars
+// avec app.get et la route et on utilise res.render pour render la page home
 app.get('/', function(req, res) {
     res.render('home');
 });
@@ -24,7 +25,7 @@ app.post('/form/signup', (req, res) => {
     console.log(req.body)
     res.redirect('/signup')
 })
-  console.log("salut");
+ 
 app.listen(port , () =>{
     console.log(`serveur started on port: ${port}`);
 })
